@@ -11,7 +11,10 @@
   align-items: center;
 
   .item-text {
+    box-sizing: border-box;
     margin-left: 0.5rem;
+    transition: all ease 0.3s;
+    border-bottom: 0.1rem solid transparent;
   }
 }
 
@@ -27,11 +30,11 @@
 .selected {
   .item-text {
     color: $clr-primary;
+    border-bottom: 0.1rem solid $clr-primary;
   }
 
   svg {
     margin: 0;
-
     * {
       fill: $clr-primary;
     }
@@ -40,16 +43,16 @@
 
 .nav-item-btn:hover {
   cursor: pointer;
-
   .item-text {
-    color: $clr-primary;
+    // color: $clr-primary;
+    border-bottom: 0.1rem solid white;
   }
 
-  svg {
-    * {
-      fill: $clr-primary;
-    }
-  }
+  // svg {
+  //   * {
+  //     fill: $clr-primary;
+  //   }
+  // }
 }
 
 // IPAD

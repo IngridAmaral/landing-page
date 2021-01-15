@@ -7,6 +7,7 @@
   align-items: center;
   padding: 1rem 1.8rem;
   box-sizing: border-box;
+  width: 100vw;
 
   .left {
     display: flex;
@@ -46,10 +47,11 @@
 
 .menu-open {
   background: $clr-primary;
+  border-bottom: solid 0.1rem white;
 
   .left {
     .header-logo {
-      background: $clr-mine-shaft;
+      background: white;
 
       svg {
         path {

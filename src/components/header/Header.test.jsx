@@ -8,7 +8,7 @@ import Header from './Header';
 
 const defaultProps = {
   onClick: () => {},
-  name: 'Liqid',
+  userName: 'Liqid',
   toggleMenu: () => {},
   isMenuOpen: false,
   selectNavItem: () => {},
@@ -16,7 +16,7 @@ const defaultProps = {
 };
 
 const {
-  name,
+  userName,
   toggleMenu,
   isMenuOpen,
   selectNavItem,
@@ -45,10 +45,10 @@ it('should render the logo component', () => {
   expect(wrapper.find(LogoSmall).exists()).toEqual(true);
 });
 
-it('should render the correct name', () => {
+it('should render the correct user name', () => {
   const wrapper = shallow(<Header {...defaultProps} />);
 
-  expect(wrapper.find('.name').text()).toEqual(`${name}!`);
+  expect(wrapper.find('.name').text()).toEqual(`${userName}!`);
 });
 
 it('should render the logout icon', () => {

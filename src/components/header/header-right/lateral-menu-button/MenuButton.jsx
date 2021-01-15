@@ -14,13 +14,8 @@ const MenuButton = ({ icon, onClick, isMenuOpen }) => (
 
 MenuButton.propTypes = {
   icon: PropTypes.node.isRequired,
-  onClick: PropTypes.func,
-  isMenuOpen: PropTypes.bool
-};
-
-MenuButton.defaultProps = {
-  onClick: () => {},
-  isMenuOpen: false
+  onClick: PropTypes.func.isRequired,
+  isMenuOpen: PropTypes.bool.isRequired
 };
 
 export default MenuButton;

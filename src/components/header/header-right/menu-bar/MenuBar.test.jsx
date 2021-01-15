@@ -5,7 +5,8 @@ import NavItem from '../../nav-item/NavItem';
 
 const defaultProps = {
   selectNavItem: () => {},
-  selectedNavItem: 'Home'
+  selectedNavItem: 'Home',
+  isMenuOpen: false
 };
 
 const { selectNavItem, selectedNavItem } = defaultProps;
@@ -17,20 +18,22 @@ it('renders component', () => {
 it('should render the correct number of nav items', () => {
   const wrapper = shallow(<MenuBar {...defaultProps} />);
 
-  expect(wrapper.find(NavItem)).toHaveLength(ICONS.length);
+  expect(wrapper.find(NavItem)).toHaveLength(ICONS.length - 1);
 });
 
 it('should send render the correct props to nav items', () => {
   const wrapper = shallow(<MenuBar {...defaultProps} />);
 
-  ICONS.forEach(({ icon, name }, idx) => {
-    expect(wrapper.find(NavItem).at(idx).props().icon).toEqual(icon);
-    expect(wrapper.find(NavItem).at(idx).props().text).toEqual(name);
-    expect(wrapper.find(NavItem).at(idx).props().onClick).toEqual(
-      selectNavItem
-    );
-    expect(wrapper.find(NavItem).at(idx).props().selectedNavItem).toEqual(
-      selectedNavItem
-    );
-  });
+  ICONS.filter((icon) => icon.name !== 'Logout').forEach(
+    ({ icon, name }, idx) => {
+      expect(wrapper.find(NavItem).at(idx).props().icon).toEqual(icon);
+      expect(wrapper.find(NavItem).at(idx).props().text).toEqual(name);
+      expect(wrapper.find(NavItem).at(idx).props().onClick).toEqual(
+        selectNavItem
+      );
+      expect(wrapper.find(NavItem).at(idx).props().selectedNavItem).toEqual(
+        selectedNavItem
+      );
+    }
+  );
 });

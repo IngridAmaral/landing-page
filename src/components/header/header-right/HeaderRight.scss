@@ -1,0 +1,14 @@
+@import '../../../colors';
+
+.header-right-container {
+  display: flex;
+  align-items: center;
+}
+
+// IPAD
+@media (min-width: 768px) {
+}
+
+// NOTEBOOK
+@media (min-width: 1024px) {
+}

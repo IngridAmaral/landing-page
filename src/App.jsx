@@ -1,8 +1,10 @@
 import React from 'react';
 import Header from './components/header/Header';
+import LateralMenu from './components/header/lateral-menu/LateralMenu';
 import './App.scss';
 
 export const HOME = 'Home';
+export const USER_NAME = 'liqid';
 
 class App extends React.Component {
   constructor(props) {
@@ -27,13 +29,24 @@ class App extends React.Component {
     const { isMenuOpen, selectedNavItem } = this.state;
 
     return (
-      <div className="App">
-        <Header
-          toggleMenu={this.toggleMenu}
-          isMenuOpen={isMenuOpen}
-          selectNavItem={this.selectNavItem}
-          selectedNavItem={selectedNavItem}
-        />
+      <div className="app">
+        <div className="header-wrapper">
+          <Header
+            userName={USER_NAME}
+            toggleMenu={this.toggleMenu}
+            isMenuOpen={false}
+            selectNavItem={this.selectNavItem}
+            selectedNavItem={selectedNavItem}
+          />
+          <div className={`lateral ${isMenuOpen ? 'show' : 'hide'}`}>
+            <LateralMenu
+              userName={USER_NAME}
+              toggleMenu={this.toggleMenu}
+              isMenuOpen={isMenuOpen}
+              selectNavItem={this.selectNavItem}
+            />
+          </div>
+        </div>
       </div>
     );
   }

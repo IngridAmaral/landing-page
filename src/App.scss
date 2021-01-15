@@ -1,0 +1,38 @@
+.app {
+  width: 100vw;
+  overflow-x: hidden;
+
+  .header-wrapper {
+    .lateral {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+
+    .hide {
+      transform: translateX(600px);
+      transition: all ease-out 0.5s;
+    }
+
+    .show {
+      transform: translateX(0);
+      transition: all ease-in 0.8s;
+    }
+  }
+}
+
+// IPAD
+@media (min-width: 768px) {
+  .app {
+    .header-wrapper {
+      .lateral {
+        display: none;
+      }
+    }
+  }
+}
+
+// NOTEBOOK
+@media (min-width: 1024px) {
+}

@@ -1,0 +1,89 @@
+@import '../../colors';
+
+.header-container {
+  background-color: $clr-mine-shaft;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.8rem;
+  box-sizing: border-box;
+
+  .left {
+    display: flex;
+    align-items: center;
+
+    .header-logo,
+    .presentation-text {
+      margin-right: 1.25rem;
+    }
+
+    .header-logo {
+      background-color: $clr-primary;
+      border-radius: 100%;
+      line-height: 0.5rem;
+      padding: 0.8rem;
+
+      svg {
+        path {
+          fill: white;
+        }
+      }
+    }
+
+    .presentation-text {
+      .name {
+        text-transform: uppercase;
+        text-decoration: underline;
+        font-style: italic;
+      }
+    }
+
+    .logout {
+      display: none;
+    }
+  }
+}
+
+.menu-open {
+  background: $clr-primary;
+
+  .left {
+    .header-logo {
+      background: $clr-mine-shaft;
+
+      svg {
+        path {
+          fill: $clr-primary;
+        }
+      }
+    }
+  }
+}
+
+// IPAD
+@media (min-width: 768px) {
+  .header-container {
+    .left {
+      .logout {
+        display: flex;
+        align-items: center;
+        border-left: 1px solid white;
+        padding-left: 1.25rem;
+
+        img {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+
+    .right {
+      .button-mobile {
+        display: none;
+      }
+    }
+  }
+}
+
+// NOTEBOOK
+@media (min-width: 1024px) {
+}

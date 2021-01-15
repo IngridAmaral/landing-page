@@ -1,0 +1,42 @@
+@import '../../../../colors';
+
+.open-btn,
+.close-btn {
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.close-btn {
+  svg {
+    fill: none;
+    stroke: $clr-primary;
+    stroke-linecap: round;
+    stroke-width: 2px;
+  }
+}
+
+.open-btn {
+  svg {
+    fill: none;
+    stroke: #fff;
+    stroke-linecap: round;
+    stroke-width: 2px;
+  }
+}
+
+// IPAD
+@media (min-width: 768px) {
+  .open-btn,
+  .close-btn {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+// NOTEBOOK
+@media (min-width: 1024px) {
+}

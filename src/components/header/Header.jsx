@@ -7,7 +7,7 @@ import Exit from '../../assets/svg/Exit';
 import './Header.scss';
 
 const Header = ({
-  name,
+  userName,
   toggleMenu,
   isMenuOpen,
   selectNavItem,
@@ -19,7 +19,7 @@ const Header = ({
         <LogoSmall />
       </div>
       <div className="presentation-text">
-        Hallo, <span className="name">{name}!</span>
+        Hallo, <span className="name">{userName}!</span>
       </div>
       <div className="logout">
         <NavItem
@@ -27,6 +27,7 @@ const Header = ({
           text="Logout"
           onClick={selectNavItem}
           selectedNavItem={selectedNavItem}
+          isMenuOpen={isMenuOpen}
         />
       </div>
     </div>
@@ -40,15 +41,11 @@ const Header = ({
 );
 
 Header.propTypes = {
-  name: PropTypes.string,
+  userName: PropTypes.string.isRequired,
   toggleMenu: PropTypes.func.isRequired,
   isMenuOpen: PropTypes.bool.isRequired,
   selectNavItem: PropTypes.func.isRequired,
   selectedNavItem: PropTypes.string.isRequired
-};
-
-Header.defaultProps = {
-  name: 'liqid'
 };
 
 export default Header;

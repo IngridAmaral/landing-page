@@ -7,7 +7,8 @@ const defaultProps = {
   onClick: () => {},
   text: 'User',
   icon: <User />,
-  selectedNavItem: 'Home'
+  selectedNavItem: 'Home',
+  isMenuOpen: false
 };
 
 it('renders component', () => {

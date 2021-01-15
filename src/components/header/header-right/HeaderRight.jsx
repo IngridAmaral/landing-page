@@ -13,7 +13,11 @@ const HeaderRight = ({
   selectedNavItem
 }) => (
   <div className="header-right-container">
-    <MenuBar selectNavItem={selectNavItem} selectedNavItem={selectedNavItem} />
+    <MenuBar
+      isMenuOpen={isMenuOpen}
+      selectNavItem={selectNavItem}
+      selectedNavItem={selectedNavItem}
+    />
     <MenuButton
       icon={isMenuOpen ? <Close /> : <HamburgerIcon />}
       onClick={toggleMenu}

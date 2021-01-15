@@ -1,7 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import LateralMenu from './components/header/lateral-menu/LateralMenu';
 import Header from './components/header/Header';
-import App, { HOME } from './App';
+import App, { HOME, USER_NAME } from './App';
 
 it('renders component', () => {
   shallow(<App />);
@@ -51,5 +52,14 @@ it('should change the selected nav item and send as prop to header', () => {
 
   expect(wrapper.find(Header).props().selectedNavItem).toEqual(
     wrapper.state().selectedNavItem
+  );
+});
+
+it('should pass the correct props to Lateral menu', () => {
+  const wrapper = shallow(<App />);
+
+  expect(wrapper.find(LateralMenu).props().userName).toEqual(USER_NAME);
+  expect(wrapper.find(LateralMenu).props().isMenuOpen).toEqual(
+    wrapper.state().isMenuOpen
   );
 });

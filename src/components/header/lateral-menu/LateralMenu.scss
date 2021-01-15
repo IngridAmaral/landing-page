@@ -1,0 +1,28 @@
+@import '../../../colors';
+
+.lateral-menu {
+  color: black;
+  background: $clr-primary;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .lateral-menu-items {
+    padding-top: 1rem;
+    .lateral-menu-item {
+      padding: 1rem;
+      background-color: $clr-primary;
+    }
+  }
+}
+
+// IPAD
+@media (min-width: 768px) {
+}
+
+// NOTEBOOK
+@media (min-width: 1024px) {
+}

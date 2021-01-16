@@ -1,0 +1,21 @@
+@import '../../colors';
+
+.main-content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+// IPAD
+@media (min-width: 768px) {
+}
+
+// NOTEBOOK
+@media (min-width: 1280px) {
+  .main-content-container {
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}

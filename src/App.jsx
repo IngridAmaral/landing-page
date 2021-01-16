@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './components/header/Header';
 import LateralMenu from './components/header/lateral-menu/LateralMenu';
+import MainContent from './components/main-content/MainContent';
 import './App.scss';
 
 export const HOME = 'Home';
@@ -47,6 +48,7 @@ class App extends React.Component {
             />
           </div>
         </div>
+        <MainContent />
       </div>
     );
   }

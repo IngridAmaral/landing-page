@@ -1,0 +1,52 @@
+@import '../../../../colors';
+
+.investment-option-container {
+  background: $clr-athens-gray;
+  padding: 2.2rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .option-title {
+    font: italic normal 300 25px/33px Roboto;
+    letter-spacing: 0px;
+    padding-left: 1.25rem;
+    box-sizing: border-box;
+    color: $clr-primary;
+    font-weight: bold;
+    border-left: 0.15rem solid $clr-primary;
+  }
+
+  .option-description {
+    color: $clr-mine-shaft;
+    line-height: 1.5rem;
+    margin-top: 1.75rem;
+  }
+
+  button {
+    margin-top: 2rem;
+  }
+}
+
+// IPAD
+@media (min-width: 768px) {
+}
+
+// NOTEBOOK
+@media (min-width: 1280px) {
+  .investment-option-container {
+    max-width: 45%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem;
+  }
+}
+
+// NOTEBOOK BIG
+@media (min-width: 1800px) {
+  .investment-option-container {
+    width: 35%;
+    margin: 1.25rem;
+  }
+}

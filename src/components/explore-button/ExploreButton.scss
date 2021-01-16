@@ -1,0 +1,40 @@
+@import '../../colors';
+
+.explore-button {
+  background: $clr-primary;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+
+  svg {
+    margin-left: 0.8rem;
+    transition: all ease 0.2s;
+    path {
+      fill: white;
+    }
+  }
+}
+
+.explore-button:hover {
+  cursor: pointer;
+  background: darken($clr-primary, 5);
+
+  svg {
+    transform: translate(4px);
+  }
+}
+
+.explore-button.curved {
+  border-radius: 0px 0px 0px 12px;
+}
+
+// IPAD
+@media (min-width: 768px) {
+}
+
+// NOTEBOOK
+@media (min-width: 1024px) {
+}

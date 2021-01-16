@@ -1,0 +1,65 @@
+@import '../../../colors';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
+
+.introduction-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #0d455d 0% 0% no-repeat padding-box;
+  font-family: 'Roboto';
+
+  .introduction-title {
+    border-left: 0.15rem solid white;
+    margin: 1.85rem;
+    padding-left: 1.75rem;
+    font: italic normal 300 28px/30px Roboto;
+    letter-spacing: 0;
+    font-size: 1.75rem;
+    line-height: 1.85rem;
+  }
+
+  .introduction-description {
+    text-align: left;
+    font: normal normal 300 16px/24px Roboto;
+    letter-spacing: 0;
+    margin: 0 1.85rem 2rem 1.85rem;
+  }
+}
+
+// IPAD
+@media (min-width: 768px) {
+  .introduction-container {
+    padding: 5rem 2.5rem;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+
+    .introduction-description,
+    .introduction-title {
+      margin: 0;
+    }
+
+    .introduction-title {
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+// NOTEBOOK
+@media (min-width: 1280px) {
+  .introduction-container {
+    height: 100%;
+    width: 50%;
+    padding: 0 6.25rem;
+
+    .introduction-title {
+      display: block;
+      margin: 0 0 1.8rem 0;
+      padding: 0 0 0 1rem;
+    }
+
+    .introduction-description {
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@import '../../../colors';
+
+.investment-options-container {
+  margin: 2rem;
+}
+
+.investment-options-container div:last-child {
+  border-radius: 0px 0px 0px 24px;
+  margin-top: 2rem;
+}
+
+// IPAD
+@media (min-width: 768px) {
+  .investment-options-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+  }
+}
+
+// NOTEBOOK
+@media (min-width: 1280px) {
+  .investment-options-container {
+    flex-direction: row;
+    align-items: unset;
+    width: 50%;
+    margin: 0;
+  }
+  .investment-options-container div:last-child {
+    border-radius: unset;
+    margin-top: 0;
+  }
+
+  .investment-options-container div:first-child {
+    border-radius: 0px 0px 0px 24px;
+    margin-top: 0;
+  }
+}

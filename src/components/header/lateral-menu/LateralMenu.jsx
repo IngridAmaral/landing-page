@@ -4,6 +4,7 @@ import Header from '../Header';
 import NavItem from '../nav-item/NavItem';
 import { ICONS } from '../header-right/menu-bar/MenuBar';
 import './LateralMenu.scss';
+import Footer from '../../footer/Footer';
 
 const LateralMenu = ({
   userName,
@@ -24,7 +25,7 @@ const LateralMenu = ({
       {ICONS.map(({ name, icon }) => (
         <div key={`nav-item-${name}`} className="lateral-menu-item">
           <NavItem
-            selectedNavItem={selectedNavItem}
+            isSelected={selectedNavItem === name}
             onClick={selectNavItem}
             icon={icon}
             text={name}
@@ -32,6 +33,10 @@ const LateralMenu = ({
           />
         </div>
       ))}
+    </div>
+
+    <div className="footer">
+      <Footer colorName="white" />
     </div>
   </div>
 );

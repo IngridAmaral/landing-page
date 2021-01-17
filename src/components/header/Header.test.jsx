@@ -62,8 +62,8 @@ it('should render the logout component with correct props', () => {
 
   expect(wrapper.find(NavItem).props().icon).toEqual(<Exit />);
   expect(wrapper.find(NavItem).props().onClick).toEqual(selectNavItem);
-  expect(wrapper.find(NavItem).props().selectedNavItem).toEqual(
-    selectedNavItem
+  expect(wrapper.find(NavItem).props().isSelected).toEqual(
+    selectedNavItem === 'Logout'
   );
 });
 

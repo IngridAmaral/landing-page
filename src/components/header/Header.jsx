@@ -26,7 +26,7 @@ const Header = ({
           icon={<Exit />}
           text="Logout"
           onClick={selectNavItem}
-          selectedNavItem={selectedNavItem}
+          isSelected={selectedNavItem === 'Logout'}
           isMenuOpen={isMenuOpen}
         />
       </div>

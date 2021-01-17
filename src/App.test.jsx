@@ -61,9 +61,7 @@ describe('Header and Lateral menu related', () => {
     const wrapper = shallow(<App />);
 
     expect(wrapper.find(LateralMenu).props().userName).toEqual(USER_NAME);
-    expect(wrapper.find(LateralMenu).props().isMenuOpen).toEqual(
-      wrapper.state().isMenuOpen
-    );
+    expect(wrapper.find(LateralMenu).props().isMenuOpen).toEqual(true);
   });
 });
 

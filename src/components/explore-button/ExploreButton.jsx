@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import RightArrow from '../../assets/svg/arrows/RightArrow';
+import Arrow from '../../assets/svg/arrows/Arrow';
 import './ExploreButton.scss';
 
 const ExploreButton = ({ curved }) => (
   <button type="button" className={`explore-button ${curved ? 'curved' : ''}`}>
     <span>Explore</span>
-    <RightArrow />
+    <Arrow arrowStyle="right-white" />
   </button>
 );
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import RightArrow from '../../assets/svg/arrows/RightArrow';
+import Arrow from '../../assets/svg/arrows/Arrow';
 import ExploreButton from './ExploreButton';
 
 it('renders component', () => {
@@ -22,5 +22,5 @@ it('should NOT add class curved when receive prop curved set to false', () => {
 it('should render the arrow', () => {
   const wrapper = shallow(<ExploreButton />);
 
-  expect(wrapper.find(RightArrow).exists()).toEqual(true);
+  expect(wrapper.find(Arrow).exists()).toEqual(true);
 });

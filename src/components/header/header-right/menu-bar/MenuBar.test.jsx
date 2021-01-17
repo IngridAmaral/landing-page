@@ -31,8 +31,8 @@ it('should send render the correct props to nav items', () => {
       expect(wrapper.find(NavItem).at(idx).props().onClick).toEqual(
         selectNavItem
       );
-      expect(wrapper.find(NavItem).at(idx).props().selectedNavItem).toEqual(
-        selectedNavItem
+      expect(wrapper.find(NavItem).at(idx).props().isSelected).toEqual(
+        selectedNavItem === name
       );
     }
   );

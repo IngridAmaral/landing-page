@@ -1,0 +1,42 @@
+@import '../../../styles/colors';
+
+.product-container {
+  .product-information {
+    display: flex;
+    background: white;
+    padding: 1rem 1.2rem;
+    box-sizing: border-box;
+
+    .product-name {
+      color: $clr-primary;
+      font-size: 1rem;
+      margin-right: 1rem;
+      font-weight: bold;
+      font-style: italic;
+      .liqid {
+        color: inherit;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+// IPAD
+@media (min-width: 768px) {
+  .product-container {
+    width: 100%;
+    display: flex;
+
+    .product-information {
+      width: 100%;
+    }
+
+    button {
+      width: fit-content;
+    }
+  }
+}
+
+// NOTEBOOK
+@media (min-width: 1280px) {
+}

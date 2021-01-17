@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './components/header/Header';
 import LateralMenu from './components/header/lateral-menu/LateralMenu';
 import MainContent from './components/main-content/MainContent';
+import UserProducts from './components/user-products/UserProducts';
 import './App.scss';
 
 export const HOME = 'Home';
@@ -43,12 +44,13 @@ class App extends React.Component {
             <LateralMenu
               userName={USER_NAME}
               toggleMenu={this.toggleMenu}
-              isMenuOpen={isMenuOpen}
+              isMenuOpen
               selectNavItem={this.selectNavItem}
             />
           </div>
         </div>
         <MainContent />
+        <UserProducts />
       </div>
     );
   }

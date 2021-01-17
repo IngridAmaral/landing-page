@@ -1,0 +1,55 @@
+@import '../../../../styles/colors';
+
+.product-details-finch,
+.product-details-copper {
+  display: flex;
+  width: fit-content;
+  padding: 0 0.5rem;
+  box-sizing: border-box;
+
+  .value,
+  .variation {
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+
+  .value {
+    margin-right: 0.5rem;
+  }
+
+  .variation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .variation-number {
+      margin-left: 0.1rem;
+    }
+  }
+}
+
+.product-details-finch {
+  .value,
+  .variation-number {
+    color: $clr-finch;
+  }
+
+  background: $clr-snow-flurry;
+}
+
+.product-details-copper {
+  .value,
+  .variation-number {
+    color: $clr-copper-rust;
+  }
+
+  background: $clr-your-pink;
+}
+
+// IPAD
+@media (min-width: 768px) {
+}
+
+// NOTEBOOK
+@media (min-width: 1280px) {
+}

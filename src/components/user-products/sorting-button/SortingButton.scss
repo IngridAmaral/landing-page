@@ -1,0 +1,29 @@
+@import '../../../styles/colors';
+
+.sorting-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  background-color: $clr-silver;
+  padding: 0.2rem 1rem;
+  font: normal normal normal 1rem Roboto;
+  letter-spacing: 0px;
+  cursor: pointer;
+
+  span {
+    margin: 0 0.5rem 0 0;
+  }
+}
+
+.sorting-button-active {
+  background-color: $clr-dove-gray;
+}
+
+// IPAD
+@media (min-width: 768px) {
+}
+
+// NOTEBOOK
+@media (min-width: 1280px) {
+}

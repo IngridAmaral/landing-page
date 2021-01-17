@@ -1,4 +1,4 @@
-@import '../../colors';
+@import '../../styles/colors';
 
 .main-content-container {
   display: flex;
@@ -8,11 +8,15 @@
 
 // IPAD
 @media (min-width: 768px) {
+  .main-content-container {
+    margin-bottom: 2rem;
+  }
 }
 
 // NOTEBOOK
 @media (min-width: 1280px) {
   .main-content-container {
+    margin-bottom: 0;
     height: 70vh;
     display: flex;
     flex-direction: row;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Close = () => (
+const Exit = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="19.999"
@@ -14,4 +14,4 @@ const Close = () => (
   </svg>
 );
 
-export default Close;
+export default Exit;

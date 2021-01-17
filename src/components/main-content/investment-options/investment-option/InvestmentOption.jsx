@@ -5,8 +5,10 @@ import './InvestmentOption.scss';
 
 const InvestmentOption = ({ title, description, exploreButton }) => (
   <div className="investment-option-container">
-    <span className="option-title">{title}</span>
-    <span className="option-description">{description}</span>
+    <div className="investment-description">
+      <span className="option-title">{title}</span>
+      <span className="option-description">{description}</span>
+    </div>
     {exploreButton && <ExploreButton curved />}
   </div>
 );

@@ -19,7 +19,7 @@ const MenuBar = ({ selectNavItem, selectedNavItem, isMenuOpen }) => (
     {ICONS.filter((icon) => icon.name !== 'Logout').map(({ name, icon }) => (
       <NavItem
         key={`nav-item-${name}`}
-        selectedNavItem={selectedNavItem}
+        isSelected={selectedNavItem === name}
         onClick={selectNavItem}
         icon={icon}
         text={name}

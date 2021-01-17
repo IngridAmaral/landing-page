@@ -7,7 +7,7 @@ const defaultProps = {
   onClick: () => {},
   text: 'User',
   icon: <User />,
-  selectedNavItem: 'Home',
+  isSelected: false,
   isMenuOpen: false
 };
 
@@ -15,36 +15,13 @@ it('renders component', () => {
   shallow(<NavItem {...defaultProps} />);
 });
 
-it('should trigger onClick when press the button if selectedItem is different', () => {
-  const click = jest.fn();
-  const wrapper = shallow(<NavItem {...defaultProps} onClick={click} />);
-
-  wrapper.find('button').simulate('click');
-
-  expect(click).toHaveBeenCalledTimes(1);
-});
-
-it('should NOT trigger onClick when press the button if selectedItem is different', () => {
-  const click = jest.fn();
-  const wrapper = shallow(
-    <NavItem
-      {...defaultProps}
-      onClick={click}
-      selectedNavItem={defaultProps.text}
-    />
-  );
-
-  wrapper.find('button').simulate('click');
-  expect(click).not.toHaveBeenCalled();
-});
-
-it('should render the selected class when selected', () => {
-  const wrapper = shallow(<NavItem {...defaultProps} selectedNavItem="User" />);
+it('should add the selected class when selected', () => {
+  const wrapper = shallow(<NavItem {...defaultProps} isSelected />);
 
   expect(wrapper.find('.selected').exists()).toEqual(true);
 });
 
-it('should not render the selected class when selected', () => {
+it('should NOT add the selected class when not selected', () => {
   const wrapper = shallow(<NavItem {...defaultProps} />);
 
   expect(wrapper.find('.selected').exists()).toEqual(false);

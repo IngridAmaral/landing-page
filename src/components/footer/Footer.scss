@@ -1,0 +1,39 @@
+@import '../../styles/colors';
+
+.footer-container-primary {
+  background: $clr-mine-shaft;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.footer-container-white {
+  background: $clr-primary;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.footer-container-primary,
+.footer-container-white {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// IPAD
+@media (min-width: 768px) {
+  .footer-container-primary {
+    padding: 4.25rem 0;
+  }
+}
+
+// NOTEBOOK
+@media (min-width: 1024px) {
+}

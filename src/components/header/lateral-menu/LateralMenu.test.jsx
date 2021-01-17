@@ -45,8 +45,8 @@ it('should send the correct props to nav item', () => {
   const wrapper = shallow(<LateralMenu {...defaultProps} />);
 
   ICONS.forEach(({ icon, name }, idx) => {
-    expect(wrapper.find(NavItem).at(idx).props().selectedNavItem).toEqual(
-      selectedNavItem
+    expect(wrapper.find(NavItem).at(idx).props().isSelected).toEqual(
+      selectedNavItem === name
     );
     expect(wrapper.find(NavItem).at(idx).props().icon).toEqual(icon);
     expect(wrapper.find(NavItem).at(idx).props().text).toEqual(name);

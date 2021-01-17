@@ -12,14 +12,19 @@
     padding-left: 1.25rem;
     box-sizing: border-box;
     margin-bottom: 2rem;
+    font-size: 2.2rem;
   }
 
   .sort-section {
     display: flex;
-    color: $clr-primary;
-    font-size: 1.2rem;
-    font-weight: bold;
     margin-bottom: 1.9rem;
+
+    .sort-title {
+      color: $clr-primary;
+      font-weight: bold;
+      font-size: 1.2rem;
+      width: fit-content;
+    }
 
     .sorting-buttons {
       margin-left: 1rem;
@@ -55,4 +60,38 @@
 
 // NOTEBOOK
 @media (min-width: 1280px) {
+  .user-products-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0;
+
+    .user-products-title {
+      width: fit-content;
+    }
+
+    .sort-section,
+    .user-products {
+      width: 70%;
+    }
+
+    .sort-section {
+      .sorting-buttons {
+        flex-direction: row;
+
+        & > button:first-child {
+          margin-bottom: 0rem;
+          margin-right: 0.8rem;
+        }
+      }
+    }
+  }
+}
+
+// NOTEBOOK BIG
+@media (min-width: 1800px) {
+  .user-products-container {
+    padding: 6.25rem 0;
+  }
 }

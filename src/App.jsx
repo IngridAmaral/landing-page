@@ -4,6 +4,7 @@ import LateralMenu from './components/header/lateral-menu/LateralMenu';
 import MainContent from './components/main-content/MainContent';
 import UserProducts from './components/user-products/UserProducts';
 import './App.scss';
+import Footer from './components/footer/Footer';
 
 export const HOME = 'Home';
 export const USER_NAME = 'liqid';
@@ -29,9 +30,9 @@ class App extends React.Component {
 
   render() {
     const { isMenuOpen, selectedNavItem } = this.state;
-
+    const fixHeight = isMenuOpen ? '100vh' : 'fit-content';
     return (
-      <div className="app">
+      <div className="app" style={{ height: fixHeight }}>
         <div className="header-wrapper">
           <Header
             userName={USER_NAME}
@@ -51,6 +52,7 @@ class App extends React.Component {
         </div>
         <MainContent />
         <UserProducts />
+        <Footer colorName="primary" />
       </div>
     );
   }

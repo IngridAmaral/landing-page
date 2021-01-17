@@ -1,6 +1,6 @@
 .app {
   width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
 
   .header-wrapper {
     .lateral {
@@ -8,16 +8,18 @@
       position: fixed;
       top: 0;
       left: 0;
+      z-index: 10;
+      height: 100vh;
     }
 
     .hide {
-      transform: translateX(600px);
+      transform: translateX(800px);
       transition: all ease-out 0.5s;
     }
 
     .show {
       transform: translateX(0);
-      transition: all ease-in 0.8s;
+      transition: all ease-in 0.6s;
     }
   }
 }

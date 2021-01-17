@@ -90,10 +90,11 @@ class UserProducts extends React.Component {
       <div className="user-products-container">
         <span className="user-products-title">{title}</span>
         <div className="sort-section">
-          Sort:
+          <span className="sort-title">Sort:</span>
           <div className="sorting-buttons">
             {SORTING_BUTTONS.map(({ text, sortBy }) => (
               <SortingButton
+                key={`sorting-burron-${text}`}
                 text={text}
                 onClick={this.handleSort}
                 isActive={

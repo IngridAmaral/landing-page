@@ -1,5 +1,4 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 import './Introduction.scss';
 
 export const INTRODUCTION_TITLE = 'Welcome to your personal area.';
@@ -12,8 +11,5 @@ const Introduction = () => (
     <span className="introduction-description">{INTRODUCTION_DESCRIPTION}</span>
   </div>
 );
-
-// Introduction.propTypes = {
-// };
 
 export default Introduction;

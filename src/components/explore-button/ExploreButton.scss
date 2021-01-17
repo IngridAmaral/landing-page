@@ -1,4 +1,4 @@
-@import '../../colors';
+@import '../../styles/colors';
 
 .explore-button {
   background: $clr-primary;
@@ -8,6 +8,7 @@
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
+  width: 100%;
 
   svg {
     margin-left: 0.8rem;

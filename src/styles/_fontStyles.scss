@@ -1,0 +1,8 @@
+@import './colors';
+
+@mixin title-section {
+  font: italic normal bold 1.75rem Roboto;
+  letter-spacing: 0px;
+  color: $clr-primary;
+  border-left: 0.15rem solid $clr-primary;
+}

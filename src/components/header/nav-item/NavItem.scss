@@ -1,4 +1,4 @@
-@import '../../../colors';
+@import '../../../styles/colors';
 
 .selected,
 .nav-item-btn {
@@ -44,15 +44,8 @@
 .nav-item-btn:hover {
   cursor: pointer;
   .item-text {
-    // color: $clr-primary;
     border-bottom: 0.1rem solid white;
   }
-
-  // svg {
-  //   * {
-  //     fill: $clr-primary;
-  //   }
-  // }
 }
 
 // IPAD

@@ -1,4 +1,4 @@
-@import '../../colors';
+@import '../../styles/colors';
 
 .header-container {
   background-color: $clr-mine-shaft;
@@ -7,7 +7,7 @@
   align-items: center;
   padding: 1rem 1.8rem;
   box-sizing: border-box;
-  width: 100vw;
+  width: 100%;
 
   .left {
     display: flex;

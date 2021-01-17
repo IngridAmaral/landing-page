@@ -1,0 +1,21 @@
+@import '../../../styles/colors';
+
+.fill-mine-shaft {
+  fill: $clr-mine-shaft;
+}
+
+.fill-white {
+  fill: white;
+}
+
+.fill-primary {
+  fill: $clr-primary;
+}
+
+// IPAD
+@media (min-width: 768px) {
+}
+
+// NOTEBOOK
+@media (min-width: 1280px) {
+}

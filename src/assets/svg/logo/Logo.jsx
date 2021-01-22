@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './LiqidWritten.scss';
+import './Logo.scss';
 
-const LiqidWritten = ({ colorName }) => (
+const Logo = ({ colorName }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="96.952"
@@ -44,8 +44,8 @@ const LiqidWritten = ({ colorName }) => (
   </svg>
 );
 
-LiqidWritten.propTypes = {
+Logo.propTypes = {
   colorName: PropTypes.string.isRequired
 };
 
-export default LiqidWritten;
+export default Logo;

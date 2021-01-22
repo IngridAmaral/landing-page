@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './components/header/Header';
-import LateralMenu from './components/header/lateral-menu/LateralMenu';
+import LateralMenu from './components/lateral-menu/LateralMenu';
 import MainContent from './components/main-content/MainContent';
 import UserProducts from './components/user-products/UserProducts';
 import './App.scss';
@@ -45,7 +45,6 @@ class App extends React.Component {
             <LateralMenu
               userName={USER_NAME}
               toggleMenu={this.toggleMenu}
-              isMenuOpen
               selectNavItem={this.selectNavItem}
             />
           </div>

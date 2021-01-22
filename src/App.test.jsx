@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import LateralMenu from './components/header/lateral-menu/LateralMenu';
+import LateralMenu from './components/lateral-menu/LateralMenu';
 import Header from './components/header/Header';
 import MainContent from './components/main-content/MainContent';
 import App, { HOME, USER_NAME } from './App';
@@ -61,7 +61,6 @@ describe('Header and Lateral menu related', () => {
     const wrapper = shallow(<App />);
 
     expect(wrapper.find(LateralMenu).props().userName).toEqual(USER_NAME);
-    expect(wrapper.find(LateralMenu).props().isMenuOpen).toEqual(true);
   });
 });
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import HeaderRight from './HeaderRight';
-import MenuButton from './lateral-menu-button/MenuButton';
+import MenuButton from './menu-button/MenuButton';
 import MenuBar from './menu-bar/MenuBar';
 
 const defaultProps = {

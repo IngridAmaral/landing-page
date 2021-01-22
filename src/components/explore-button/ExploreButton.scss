@@ -10,12 +10,9 @@
   box-sizing: border-box;
   width: 100%;
 
-  svg {
+  .arrow-container {
     margin-left: 0.8rem;
     transition: all ease 0.2s;
-    path {
-      fill: white;
-    }
   }
 }
 
@@ -23,7 +20,7 @@
   cursor: pointer;
   background: darken($clr-primary, 5);
 
-  svg {
+  .arrow-container {
     transform: translate(4px);
   }
 }

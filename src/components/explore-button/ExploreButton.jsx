@@ -1,21 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Arrow from '../../assets/svg/arrows/Arrow';
+import Arrow from '../../assets/svg/arrow/Arrow';
 import './ExploreButton.scss';
 
-const ExploreButton = ({ curved }) => (
+const ExploreButton = ({ curved, text }) => (
   <button type="button" className={`explore-button ${curved ? 'curved' : ''}`}>
-    <span>Explore</span>
-    <Arrow arrowStyle="right-white" />
+    <span>{text}</span>
+    <div className="arrow-container">
+      <Arrow direction="right" color="white" />
+    </div>
   </button>
 );
 
 ExploreButton.propTypes = {
-  curved: PropTypes.bool
+  curved: PropTypes.bool,
+  text: PropTypes.string
 };
 
 ExploreButton.defaultProps = {
-  curved: false
+  curved: false,
+  text: 'Explore'
 };
 
 export default ExploreButton;

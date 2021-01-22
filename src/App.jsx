@@ -6,7 +6,7 @@ import UserProducts from './components/user-products/UserProducts';
 import './App.scss';
 import Footer from './components/footer/Footer';
 
-export const HOME = 'Home';
+export const HOME = 'home';
 export const USER_NAME = 'liqid';
 
 class App extends React.Component {
@@ -52,7 +52,7 @@ class App extends React.Component {
         </div>
         <MainContent />
         <UserProducts />
-        <Footer colorName="primary" />
+        <Footer backgroundColor="mine-shaft" svgColor="primary" />
       </div>
     );
   }

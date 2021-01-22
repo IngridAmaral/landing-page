@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Arrow from '../../../assets/svg/arrows/Arrow';
+import Arrow from '../../../assets/svg/arrow/Arrow';
 import './SortingButton.scss';
 
 const renderArrow = (sortBy) =>
   sortBy === 'lowest' ? (
-    <Arrow arrowStyle="down-white" />
+    <Arrow direction="down" color="white" />
   ) : (
-    <Arrow arrowStyle="up-white" />
+    <Arrow direction="up" color="white" />
   );
 
 const SortingButton = ({ isActive, text, sortBy, onClick }) => (

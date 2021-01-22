@@ -94,7 +94,7 @@ class UserProducts extends React.Component {
           <div className="sorting-buttons">
             {SORTING_BUTTONS.map(({ text, sortBy }) => (
               <SortingButton
-                key={`sorting-burron-${text}`}
+                key={`sorting-button-${text}`}
                 text={text}
                 onClick={this.handleSort}
                 isActive={
@@ -109,7 +109,11 @@ class UserProducts extends React.Component {
         </div>
         <div className="user-products">
           {productsData.map((product) => (
-            <Product product={product} key={`product${product.name}`} />
+            <Product
+              product={product}
+              key={`product${product.name}`}
+              isVariationPositive={product.details.variation > 0}
+            />
           ))}
         </div>
       </div>

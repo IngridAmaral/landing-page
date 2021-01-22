@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import LateralMenu from './LateralMenu';
-import { ICONS } from '../header-right/menu-bar/MenuBar';
+import { ICONS, ICONS_KEYS } from '../../../data';
 import Header from '../Header';
 import NavItem from '../nav-item/NavItem';
 
@@ -38,18 +38,18 @@ it('should render a header component with props', () => {
 it('should render the correct number of items', () => {
   const wrapper = shallow(<LateralMenu {...defaultProps} />);
 
-  expect(wrapper.find('.lateral-menu-item')).toHaveLength(ICONS.length);
+  expect(wrapper.find('.lateral-menu-item')).toHaveLength(ICONS_KEYS.length);
 });
 
 it('should send the correct props to nav item', () => {
   const wrapper = shallow(<LateralMenu {...defaultProps} />);
 
-  ICONS.forEach(({ icon, name }, idx) => {
-    expect(wrapper.find(NavItem).at(idx).props().isSelected).toEqual(
-      selectedNavItem === name
-    );
-    expect(wrapper.find(NavItem).at(idx).props().icon).toEqual(icon);
-    expect(wrapper.find(NavItem).at(idx).props().text).toEqual(name);
+  ICONS_KEYS.forEach((iconName, idx) => {
+    expect(wrapper.find(NavItem).at(idx).props().iconData).toEqual({
+      icon: ICONS[iconName].icon,
+      name: iconName,
+      isSelected: selectedNavItem === iconName
+    });
     expect(wrapper.find(NavItem).at(idx).props().isMenuOpen).toEqual(
       isMenuOpen
     );

@@ -8,11 +8,11 @@ const defaultProps = {
   product: {
     name: 'Wealth',
     details: { value: '500.000', currency: '€', variation: 25.3 }
-  }
+  },
+  isVariationPositive: true
 };
 
 const {
-  product,
   product: { name, details }
 } = defaultProps;
 
@@ -31,28 +31,6 @@ it('renders the details component with the correct props', () => {
 
   expect(wrapper.find(Details).props().details).toEqual(details);
   expect(wrapper.find(Details).props().details).toEqual(details);
-});
-
-it('should have the correct arrow style when variation is positive', () => {
-  const wrapper = shallow(<Product {...defaultProps} />);
-
-  expect(wrapper.state().isVariationPositive).toEqual(true);
-  expect(wrapper.state().arrowStyle).toEqual('up-finch');
-});
-
-it('should have the correct arrow style when variation is negative', () => {
-  const wrapper = shallow(
-    <Product
-      {...defaultProps}
-      product={{
-        ...product,
-        details: { ...details, variation: -10 }
-      }}
-    />
-  );
-
-  expect(wrapper.state().isVariationPositive).toEqual(false);
-  expect(wrapper.state().arrowStyle).toEqual('down-copper');
 });
 
 it('should render the explore button', () => {

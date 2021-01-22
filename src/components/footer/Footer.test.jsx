@@ -1,21 +1,30 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import LiqidWritten from '../../assets/svg/liqid/LiqidWritten';
+import Logo from '../../assets/svg/logo/Logo';
 import Footer from './Footer';
 
 const defaultProps = {
-  colorName: 'white'
+  backgroundColor: 'mine-shaft',
+  svgColor: 'white'
 };
+
+const { backgroundColor, svgColor } = defaultProps;
 
 it('renders component', () => {
   shallow(<Footer {...defaultProps} />);
 });
 
-it('should render liqid logo component with the correct props', () => {
+it('should render the correct class', () => {
   const wrapper = shallow(<Footer {...defaultProps} />);
 
-  expect(wrapper.find(LiqidWritten).exists()).toEqual(true);
-  expect(wrapper.find(LiqidWritten).props().colorName).toEqual(
-    defaultProps.colorName
+  expect(wrapper.find(`.footer-container-${backgroundColor}`).exists()).toEqual(
+    true
   );
+});
+
+it('should render logo component with the correct props', () => {
+  const wrapper = shallow(<Footer {...defaultProps} />);
+
+  expect(wrapper.find(Logo).exists()).toEqual(true);
+  expect(wrapper.find(Logo).props().colorName).toEqual(svgColor);
 });

@@ -14,7 +14,7 @@ const SortingButton = ({ isActive, text, sortBy, onClick }) => (
   <button
     id={sortBy}
     type="button"
-    onClick={() => onClick(sortBy)}
+    onClick={() => (isActive ? onClick() : onClick(sortBy))}
     className={`sorting-button ${isActive ? 'sorting-button-active' : ''}`}
   >
     <span>{text}</span>

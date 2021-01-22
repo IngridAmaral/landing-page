@@ -1,31 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import NavItem from '../../nav-item/NavItem';
-import Home from '../../../../assets/svg/Home';
-import Settings from '../../../../assets/svg/Settings';
-import User from '../../../../assets/svg/User';
-import Exit from '../../../../assets/svg/Exit';
+import { ICONS, ICONS_KEYS } from '../../../../data';
 import './MenuBar.scss';
-
-export const ICONS = [
-  { name: 'Logout', icon: <Exit /> },
-  { name: 'Home', icon: <Home /> },
-  { name: 'Settings', icon: <Settings /> },
-  { name: 'User', icon: <User /> }
-];
 
 const MenuBar = ({ selectNavItem, selectedNavItem, isMenuOpen }) => (
   <div className="menu-bar-container">
-    {ICONS.filter((icon) => icon.name !== 'Logout').map(({ name, icon }) => (
-      <NavItem
-        key={`nav-item-${name}`}
-        isSelected={selectedNavItem === name}
-        onClick={selectNavItem}
-        icon={icon}
-        text={name}
-        isMenuOpen={isMenuOpen}
-      />
-    ))}
+    {ICONS_KEYS.map((iconName) =>
+      iconName !== 'logout' ? (
+        <NavItem
+          key={`nav-item-${iconName}`}
+          iconData={{
+            icon: ICONS[iconName].icon,
+            name: iconName,
+            isSelected: selectedNavItem === iconName
+          }}
+          onClick={selectNavItem}
+          isMenuOpen={isMenuOpen}
+        />
+      ) : null
+    )}
   </div>
 );
 

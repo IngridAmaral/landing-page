@@ -2,22 +2,28 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './NavItem.scss';
 
-const NavItem = ({ icon, onClick, text, isSelected, isMenuOpen }) => (
+const NavItem = ({
+  iconData: { name, icon, isSelected },
+  onClick,
+  isMenuOpen
+}) => (
   <button
     className={`${isSelected && !isMenuOpen ? 'selected' : 'nav-item-btn'}`}
     type="button"
-    onClick={isSelected ? () => {} : () => onClick(text)}
+    onClick={isSelected ? () => {} : () => onClick(name)}
   >
     {icon}
-    <span className="item-text">{text}</span>
+    <span className="item-name">{name}</span>
   </button>
 );
 
 NavItem.propTypes = {
-  icon: PropTypes.node.isRequired,
+  iconData: PropTypes.shape({
+    name: PropTypes.string,
+    icon: PropTypes.node,
+    isSelected: PropTypes.bool
+  }).isRequired,
   onClick: PropTypes.func.isRequired,
-  text: PropTypes.string.isRequired,
-  isSelected: PropTypes.bool.isRequired,
   isMenuOpen: PropTypes.bool.isRequired
 };
 

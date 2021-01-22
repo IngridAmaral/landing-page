@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Header from '../Header';
 import NavItem from '../nav-item/NavItem';
-import { ICONS } from '../header-right/menu-bar/MenuBar';
+import { ICONS, ICONS_KEYS } from '../../../data';
 import './LateralMenu.scss';
 import Footer from '../../footer/Footer';
 
@@ -22,13 +22,15 @@ const LateralMenu = ({
       selectedNavItem={selectedNavItem}
     />
     <div className="lateral-menu-items">
-      {ICONS.map(({ name, icon }) => (
-        <div key={`nav-item-${name}`} className="lateral-menu-item">
+      {ICONS_KEYS.map((iconName) => (
+        <div key={`nav-item-${iconName}`} className="lateral-menu-item">
           <NavItem
-            isSelected={selectedNavItem === name}
+            iconData={{
+              icon: ICONS[iconName].icon,
+              name: ICONS[iconName].name,
+              isSelected: selectedNavItem === ICONS[iconName].name
+            }}
             onClick={selectNavItem}
-            icon={icon}
-            text={name}
             isMenuOpen={isMenuOpen}
           />
         </div>
@@ -36,7 +38,7 @@ const LateralMenu = ({
     </div>
 
     <div className="footer">
-      <Footer colorName="white" />
+      <Footer svgColor="white" backgroundColor="primary" />
     </div>
   </div>
 );

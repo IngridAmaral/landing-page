@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import MenuBar from './menu-bar/MenuBar';
-import MenuButton from './lateral-menu-button/MenuButton';
+import MenuButton from './menu-button/MenuButton';
 import Close from '../../../assets/svg/Close';
 import HamburgerIcon from '../../../assets/svg/HamburgerIcon';
 import './HeaderRight.scss';

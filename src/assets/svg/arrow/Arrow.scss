@@ -1,0 +1,45 @@
+@import '../../../styles/colors';
+
+.arrow-white {
+  path {
+    fill: white;
+  }
+}
+
+.arrow-finch {
+  width: 0.65rem;
+  height: auto;
+  margin: 0;
+  path {
+    fill: $clr-finch;
+  }
+}
+
+.arrow-copper {
+  width: 0.65rem;
+  height: auto;
+  margin: 0;
+  path {
+    fill: $clr-copper-rust;
+  }
+}
+
+.arrow-left {
+  transform: rotate(180deg);
+}
+
+.arrow-up {
+  transform: rotate(-90deg);
+}
+
+.arrow-down {
+  transform: rotate(90deg);
+}
+
+// IPAD
+@media (min-width: 768px) {
+}
+
+// NOTEBOOK
+@media (min-width: 1280px) {
+}

@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import ExploreButton from '../../../explore-button/ExploreButton';
 import './InvestmentOption.scss';
 
-const InvestmentOption = ({ title, description, exploreButton }) => (
+const InvestmentOption = ({
+  option: { title, description, exploreButton }
+}) => (
   <div className="investment-option-container">
     <div className="investment-description">
       <span className="option-title">{title}</span>
@@ -14,9 +16,11 @@ const InvestmentOption = ({ title, description, exploreButton }) => (
 );
 
 InvestmentOption.propTypes = {
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  exploreButton: PropTypes.bool.isRequired
+  option: PropTypes.shape({
+    title: PropTypes.string,
+    description: PropTypes.string,
+    exploreButton: PropTypes.bool
+  }).isRequired
 };
 
 export default InvestmentOption;

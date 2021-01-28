@@ -1,7 +1,7 @@
 @import '../../../../styles/colors';
 
-.product-details-finch,
-.product-details-copper {
+.product-details-positive,
+.product-details-negative {
   display: flex;
   width: fit-content;
   padding: 0 0.5rem;
@@ -28,7 +28,7 @@
   }
 }
 
-.product-details-finch {
+.product-details-positive {
   .value,
   .variation-number {
     color: $clr-finch;
@@ -37,7 +37,7 @@
   background: $clr-snow-flurry;
 }
 
-.product-details-copper {
+.product-details-negative {
   .value,
   .variation-number {
     color: $clr-copper-rust;

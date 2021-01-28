@@ -1,10 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Arrow from '../../../../assets/svg/arrows/Arrow';
+import Arrow from '../../../../assets/svg/arrow/Arrow';
 import Details, { replaceNegatveOperator } from './Details';
 
 const defaultProps = {
-  arrow: <Arrow arrowStyle="up-white" />,
+  arrow: <Arrow direction="up" color="white" />,
   details: { value: '500.000', currency: '€', variation: 25.3 },
   colorName: 'finch'
 };

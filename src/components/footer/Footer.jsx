@@ -1,16 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import LiqidWritten from '../../assets/svg/liqid/LiqidWritten';
+import Logo from '../../assets/svg/logo/Logo';
 import './Footer.scss';
 
-const Footer = ({ colorName }) => (
-  <footer className={`footer-container-${colorName}`}>
-    <LiqidWritten colorName={colorName} />
+const Footer = ({ backgroundColor, svgColor }) => (
+  <footer className={`footer-container-${backgroundColor}`}>
+    <Logo colorName={svgColor} />
   </footer>
 );
 
 Footer.propTypes = {
-  colorName: PropTypes.string.isRequired
+  backgroundColor: PropTypes.string.isRequired,
+  svgColor: PropTypes.string.isRequired
 };
 
 export default Footer;

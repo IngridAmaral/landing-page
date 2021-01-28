@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Arrow from '../../assets/svg/arrows/Arrow';
+import Arrow from '../../assets/svg/arrow/Arrow';
 import ExploreButton from './ExploreButton';
 
 it('renders component', () => {

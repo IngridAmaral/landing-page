@@ -1,15 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Header from '../Header';
-import NavItem from '../nav-item/NavItem';
-import { ICONS } from '../header-right/menu-bar/MenuBar';
+import Header from '../header/Header';
+import NavItem from '../header/nav-item/NavItem';
+import { ICONS, ICONS_KEYS } from '../../data';
 import './LateralMenu.scss';
-import Footer from '../../footer/Footer';
+import Footer from '../footer/Footer';
 
 const LateralMenu = ({
   userName,
   toggleMenu,
-  isMenuOpen,
   selectNavItem,
   selectedNavItem
 }) => (
@@ -17,26 +16,28 @@ const LateralMenu = ({
     <Header
       userName={userName}
       toggleMenu={toggleMenu}
-      isMenuOpen={isMenuOpen}
+      isMenuOpen
       selectNavItem={selectNavItem}
       selectedNavItem={selectedNavItem}
     />
     <div className="lateral-menu-items">
-      {ICONS.map(({ name, icon }) => (
-        <div key={`nav-item-${name}`} className="lateral-menu-item">
+      {ICONS_KEYS.map((iconName) => (
+        <div key={`nav-item-${iconName}`} className="lateral-menu-item">
           <NavItem
-            isSelected={selectedNavItem === name}
+            iconData={{
+              icon: ICONS[iconName].icon,
+              name: ICONS[iconName].name,
+              isSelected: selectedNavItem === ICONS[iconName].name
+            }}
             onClick={selectNavItem}
-            icon={icon}
-            text={name}
-            isMenuOpen={isMenuOpen}
+            isMenuOpen
           />
         </div>
       ))}
     </div>
 
     <div className="footer">
-      <Footer colorName="white" />
+      <Footer svgColor="white" backgroundColor="primary" />
     </div>
   </div>
 );
@@ -44,7 +45,6 @@ const LateralMenu = ({
 LateralMenu.propTypes = {
   userName: PropTypes.string.isRequired,
   toggleMenu: PropTypes.func.isRequired,
-  isMenuOpen: PropTypes.bool.isRequired,
   selectNavItem: PropTypes.func.isRequired,
   selectedNavItem: PropTypes.string
 };

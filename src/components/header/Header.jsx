@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import NavItem from './nav-item/NavItem';
-import LogoSmall from '../../assets/svg/liqid/LogoSmall';
+import LogoImg from '../../assets/svg/logo/LogoImg';
 import HeaderRight from './header-right/HeaderRight';
-import Exit from '../../assets/svg/Exit';
+import { ICONS } from '../../data';
 import './Header.scss';
 
 const Header = ({
@@ -16,17 +16,20 @@ const Header = ({
   <header className={`header-container ${isMenuOpen ? 'menu-open' : ''}`}>
     <div className="left">
       <div className="header-logo">
-        <LogoSmall />
+        <LogoImg />
       </div>
       <div className="presentation-text">
         Hallo, <span className="name">{userName}!</span>
       </div>
       <div className="logout">
         <NavItem
-          icon={<Exit />}
-          text="Logout"
+          key={`nav-item-${ICONS.logout.name}`}
+          iconData={{
+            icon: ICONS.logout.icon,
+            name: ICONS.logout.name,
+            isSelected: selectedNavItem === ICONS.logout.name
+          }}
           onClick={selectNavItem}
-          isSelected={selectedNavItem === 'Logout'}
           isMenuOpen={isMenuOpen}
         />
       </div>

@@ -1,12 +1,12 @@
 import React from 'react';
 import Header from './components/header/Header';
-import LateralMenu from './components/header/lateral-menu/LateralMenu';
+import LateralMenu from './components/lateral-menu/LateralMenu';
 import MainContent from './components/main-content/MainContent';
 import UserProducts from './components/user-products/UserProducts';
 import './App.scss';
 import Footer from './components/footer/Footer';
 
-export const HOME = 'Home';
+export const HOME = 'home';
 export const USER_NAME = 'liqid';
 
 class App extends React.Component {
@@ -45,14 +45,13 @@ class App extends React.Component {
             <LateralMenu
               userName={USER_NAME}
               toggleMenu={this.toggleMenu}
-              isMenuOpen
               selectNavItem={this.selectNavItem}
             />
           </div>
         </div>
         <MainContent />
         <UserProducts />
-        <Footer colorName="primary" />
+        <Footer backgroundColor="mine-shaft" svgColor="primary" />
       </div>
     );
   }

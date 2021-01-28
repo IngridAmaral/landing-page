@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import NavItem from './nav-item/NavItem';
-import LogoSmall from '../../assets/svg/liqid/LogoSmall';
+import LogoImg from '../../assets/svg/logo/LogoImg';
 import HeaderRight from './header-right/HeaderRight';
 import Exit from '../../assets/svg/Exit';
 import Header from './Header';
@@ -42,7 +42,7 @@ it('should not render the menu open', () => {
 it('should render the logo component', () => {
   const wrapper = shallow(<Header {...defaultProps} />);
 
-  expect(wrapper.find(LogoSmall).exists()).toEqual(true);
+  expect(wrapper.find(LogoImg).exists()).toEqual(true);
 });
 
 it('should render the correct user name', () => {
@@ -51,20 +51,15 @@ it('should render the correct user name', () => {
   expect(wrapper.find('.name').text()).toEqual(`${userName}!`);
 });
 
-it('should render the logout icon', () => {
-  const wrapper = shallow(<Header {...defaultProps} />);
-
-  expect(wrapper.find(NavItem).props().text).toEqual('Logout');
-});
-
 it('should render the logout component with correct props', () => {
   const wrapper = shallow(<Header {...defaultProps} />);
 
-  expect(wrapper.find(NavItem).props().icon).toEqual(<Exit />);
+  expect(wrapper.find(NavItem).props().iconData).toEqual({
+    icon: <Exit />,
+    name: 'logout',
+    isSelected: selectedNavItem === 'logout'
+  });
   expect(wrapper.find(NavItem).props().onClick).toEqual(selectNavItem);
-  expect(wrapper.find(NavItem).props().isSelected).toEqual(
-    selectedNavItem === 'Logout'
-  );
 });
 
 it('should render the header right with the correct props', () => {

@@ -10,11 +10,12 @@
   display: flex;
   align-items: center;
 
-  .item-text {
+  .item-name {
     box-sizing: border-box;
     margin-left: 0.5rem;
     transition: all ease 0.3s;
     border-bottom: 0.1rem solid transparent;
+    text-transform: capitalize;
   }
 }
 
@@ -28,7 +29,7 @@
 }
 
 .selected {
-  .item-text {
+  .item-name {
     color: $clr-primary;
     border-bottom: 0.1rem solid $clr-primary;
   }
@@ -43,7 +44,7 @@
 
 .nav-item-btn:hover {
   cursor: pointer;
-  .item-text {
+  .item-name {
     border-bottom: 0.1rem solid white;
   }
 }
